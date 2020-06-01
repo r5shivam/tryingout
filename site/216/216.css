@@ -16,9 +16,6 @@ abbr { border: none }
 h3, .design-archives a:before {
     font-size: 1.1875em;
 }
-/* These selection declarations have to be separate.
-   No text-shadow: twitter.com/miketaylr/status/12228805301 
-*/
 ::-moz-selection{ background: #fff; color:#804; text-shadow: none; }
 ::selection { background:#fff; color:#804; text-shadow: none; } 
 
@@ -107,15 +104,6 @@ ul {
 header[role=banner] {
     font-size: 30px;
 }
-
-/*  xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo
-    =Layout
-    
-    All righty then. Let's roll.
-    
-    First, backgrounds + set up the page wrapper
-    --------------------------------------------------    */
-
 body {
     text-align: right;
     max-width: 540px;
@@ -151,13 +139,6 @@ body, .page-wrapper:before, .page-wrapper:after {
 .page-wrapper, .intro:after, .supporting div, .supporting footer {
     background: #fceec6 url('kiss_light.jpg') no-repeat fixed 50% top;
 }
-/*  Somewhat torn about these bg images.
-    
-    The large-sized images are not ideal for mobile devices. 
-    But serving up a smaller image really requires background-size, 
-    and this compromises the design severely on older browsers.
-*/
-
 .page-wrapper:before {
     content: ' ';
     position: fixed;
@@ -168,11 +149,6 @@ body, .page-wrapper:before, .page-wrapper:after {
     left: 0;
     bottom: 0;
 }
-
-/*  xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo
-    =Intro
-    Note: IE<9 ignores styles for HTML5 elements. .intro is one.
-    --------------------------------------------------    */
 
 .intro {
     padding: 96px 0 36px;
@@ -313,8 +289,6 @@ h1 {
         padding: 0 0 .1em;
     }
 }
-
-/* h2 - "The Beauty..." */
 h2 {
     text-align: center;
 }
@@ -349,7 +323,6 @@ h2 {
         font-weight: bold;
         font-style: italic;
     }
-    /* Making little lines around the "of" */
     h2 abbr:before, h2 abbr:after {
         display: block;
         content: ' ';
@@ -381,7 +354,7 @@ h2 {
     header[role=banner] {
         top: -1.7em;
         right: 0;
-        left: 580px; /* abut page-wrapper */
+        left: 580px; 
         height: 9em;
     }
     
@@ -389,7 +362,7 @@ h2 {
 
     .summary {
         right: 0;
-        left: 580px; /* abut page-wrapper */
+        left: 580px;
         bottom: 0;
         padding: 0 1.2em 10px;
     }
@@ -490,10 +463,6 @@ h2 {
     }
 }
 
-/*  xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo
-    Background Sizing for main elements
-    --------------------------------------------------    */
-
 @media screen and (min-width: 1201px) {
     body, .page-wrapper, .page-wrapper:before, .page-wrapper:after, .intro:after, .supporting div, .supporting footer {
         background-size: 100%; /* if wider than bg image, make those suckers grow! */
@@ -512,10 +481,6 @@ h2 {
 }
 
 @media screen and (max-device-width: 1024px) {
-    /*
-    Necessary b/c Mobile Safari does not support fixed background positioning
-    http://stackoverflow.com/questions/3011226/using-background-attachmentfixed-in-safari-on-the-ipad
-    */
     .intro:after {
         background: none;
     }
@@ -525,17 +490,6 @@ h2 {
 }
 @media screen and (max-device-width: 600px) { body, .page-wrapper:before { background-size: 800px } }
 @media screen and (max-device-width: 400px) { body, .page-wrapper:before { background-size: 600px } }
-
-/*  xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo
-    =Supporting Content
-    
-    Primarily backgrounds and added content on h3s
-    
-    Because we want the bgs to show up on scrolling,
-    background-position does get a little involved,
-    with a fair amount of fine-tuning required.
-    --------------------------------------------------    */
-
 .supporting {
     position: relative;
     z-index: 1;
@@ -560,8 +514,6 @@ h2 {
 .requirements h3 { background-position: -2200px 250px }
 .supporting footer:before { background-position: -2900px 300px }
 
-/*  If a wider screen, shift the images 
-    (footer:before gets special SPECIAL treatment, below) */
 @media screen and (min-width: 1360px) {
     .explanation h3 { background-position: 550px 200px }
     .participation h3 { background-position: -450px 200px }
@@ -569,7 +521,6 @@ h2 {
     .requirements h3 { background-position: -1980px 250px }
 }
 
-/*  If a taller screen, reveal the images lower */
 @media screen and (min-height: 800px) {
     .explanation h3 { background-position: 300px 350px }
     .participation h3 { background-position: -600px 350px }
@@ -577,7 +528,6 @@ h2 {
     .requirements h3 { background-position: -2200px 350px }
 }
 
-/*  If a wider AND taller screen, well... */
 @media screen and (min-width: 1360px) and (min-height: 800px) {
     .explanation h3 { background-position: 550px 350px }
     .participation h3 { background-position: -450px 350px }
@@ -585,7 +535,6 @@ h2 {
     .requirements h3 { background-position: -1980px 350px }
 }
 
-/* Target smaller screens ... and the iPad, since mobile safari does not support bg attach: fixed */
 @media screen and (max-width: 580px), screen and (max-device-width: 580px),
 screen and (device-width: 768px), screen and (device-width: 1024px) {
     .supporting h3, .supporting footer:before {
@@ -600,7 +549,6 @@ screen and (device-width: 768px), screen and (device-width: 1024px) {
     .supporting footer:before { background-position: -2700px -20px }
 }
 
-/* target smallest screen setup */
 @media screen and (max-width: 420px) {
     .supporting h3, .supporting footer:before {
         background-size: 2625px; /* 75% size */
@@ -692,19 +640,6 @@ div[class^=design] a, div[class^=zen] a {
     top: -3.7em;
     content: 'fountain kiss ';
 }
-
-
-/*  xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo
-    =Sidebar Styling
-    
-    We are using borders liberally instead of padding
-    so iOS devices can just have an image shine through.
-    Desktop has background: fixed, but mobile Safari no likey.
-    
-    Again, IE<9 ignores styles for HTML5 elements.
-    .sidebar is one. We will take advantage of that...
-    --------------------------------------------------    */
-
 .sidebar .wrapper div {
     padding: 20px;
 }
@@ -754,7 +689,6 @@ div[class^=design] a, div[class^=zen] a {
     margin-right: -5px;
 }
 
-/* >> The Magnificent CLEARFIX << */
 .zen-resources ul:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 .zen-resources ul { display: inline-block; }
 * html .zen-resources ul { height: 1%; } /* Hides from IE-mac \*/
@@ -790,8 +724,6 @@ div[class^=design] a, div[class^=zen] a {
     padding: 1.5em 0;
 }
 
-
-/* Next / Previous / View All */
 
 .design-archives ul {
     padding: 0 !important;
@@ -901,13 +833,6 @@ div[class^=design] a, div[class^=zen] a {
        -moz-box-shadow: inset 0 12px 18px -6px rgba(0,0,0,0.4);
             box-shadow: inset 0 12px 18px -6px rgba(0,0,0,0.4);
 }
-
-/*  xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo
-    =Responsive Sidebars
-    
-    Depending on screen dimensions, we can place sidebar
-    elements on the right of the screen.
-    --------------------------------------------------    */
 
 @media screen and (min-width: 960px) and (min-height: 700px) {
     .sidebar .wrapper .design-selection {
