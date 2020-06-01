@@ -986,14 +986,6 @@ div[class^=design] a, div[class^=zen] a {
     .sidebar .design-archives ul {
         height: 80px;
     }
-
-    .supporting footer {
-        padding-bottom: 2em;
-        background-image: url('border.png');
-        background-repeat: no-repeat;
-        background-position: 50% 50px;
-    }
-    .supporting footer:before { background-position: -2900px bottom }
 }
 @media screen and (min-width: 1360px) and (min-height: 960px) { .supporting footer:before { background-position: -2730px bottom } }
 
