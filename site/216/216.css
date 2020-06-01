@@ -76,10 +76,10 @@ h3:before, h3:after, footer:before {
     font-style: italic;
 }
 
-footer a {
-    text-transform: lowercase;
+h1 {
+    color: #8a0303;
 }
-h1, h3 {
+h3 {
     color: #fff;
 }
 .supporting h3 {
@@ -155,15 +155,7 @@ body, .page-wrapper:before, .page-wrapper:after {
     position: relative;
     text-align: center;
     margin: -30px 0 0;
-    background: rgba(250,243,204,0.6);
-    background:    -moz-radial-gradient(center, ellipse cover,  rgba(249,249,249,1) 0%, rgba(250,223,154,0.4) 100%); /* FF3.6+ */
-    background:        -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(249,249,249,1)), color-stop(100%,rgba(250,223,154,0.4))); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  rgba(249,249,249,1) 0%,rgba(250,223,154,0.4) 100%); /* Chrome10+,Safari5.1+ */
-    background:      -o-radial-gradient(center, ellipse cover,  rgba(249,249,249,1) 0%,rgba(250,223,154,0.4) 100%); /* Opera 12+ */
-    background:     -ms-radial-gradient(center, ellipse cover,  rgba(249,249,249,1) 0%,rgba(250,223,154,0.4) 100%); /* IE10+ */
-    background:         radial-gradient(ellipse at center,  rgba(249,249,249,1) 0%,rgba(250,223,154,0.4) 100%); /* W3C */
-    border-color: rgba(250,223,154,0.3);
-    border-style: solid;
+    border-style: ridge;
     -webkit-transition: all .2s ease;
        -moz-transition: all .2s ease;
         -ms-transition: all .2s ease;
@@ -303,7 +295,7 @@ h2 {
         font-size: 1em;
         width: 10em;
         height: 6em;
-        clip:rect(0,7.2em,6em,-.5em);
+        clip:rect(0,9em,6em,-.5em);
         line-height: 2;
         text-align: left;
         color:#fff;
@@ -323,7 +315,7 @@ h2 {
         font-weight: bold;
         font-style: italic;
     }
-    h2 abbr:before, h2 abbr:after {
+    h2 span:before, h2 span:after {
         display: block;
         content: ' ';
         border-top: 3px solid rgb(136,0,68);
@@ -337,10 +329,10 @@ h2 {
         position: absolute;
         top: 2em;
         }
-    h2 abbr:before {
+    h2 span:before {
         left: .1em;
     }
-    h2 abbr:after {
+    h2 span:after {
         right: 3.1em;
     }
 
@@ -564,7 +556,7 @@ screen and (device-width: 768px), screen and (device-width: 1024px) {
     padding-right: 60%;
 }
 .explanation h3:before {
-    content: 'she asked ';
+    content: 'Beginning ';
     display: block;
 }
 .supporting .participation h3, .supporting .requirements h3 {
@@ -580,17 +572,17 @@ screen and (device-width: 768px), screen and (device-width: 1024px) {
     }
 }
 .participation h3:before {
-    content: 'he requested her ';
+    content: 'I asked for a ';
     display: block;
 }
 .benefits h3:before {
-    content: 'they became friends with ';
+    content: 'the streak of ';
 }
 .requirements h3:before {
     content: 'before long, though, ';
 }
 .requirements h3:after {
-    content: ' had crept in';
+    content: 'had crept in';
 }
 .supporting div {
     padding: 0 0 3em;
@@ -611,13 +603,13 @@ div[class^=design] a, div[class^=zen] a {
 }
 
 .supporting footer {
-    font-size: 125%;
+    font-size: 90%;
     position: relative;
     margin: 0;
     padding: 20px;
     text-align: center;
     border-top: 6em solid #804;
-    background: #41071e;
+    background: #fff;
 }
 .supporting footer:before, .supporting footer:after {
     display: block;
@@ -638,7 +630,7 @@ div[class^=design] a, div[class^=zen] a {
 
 .supporting footer:after {
     top: -3.7em;
-    content: 'fountain kiss ';
+    content: 'wrong phone call ';
 }
 .sidebar .wrapper div {
     padding: 20px;
